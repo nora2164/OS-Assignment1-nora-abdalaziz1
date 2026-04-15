@@ -1,121 +1,183 @@
-# Development Log
+DEVELOPMENT_LOG.md
 
-## Instructions
-Document your development process as you work on the assignment. Add entries showing:
-- What you worked on
-- Problems you encountered
-- How you solved them
-- Time spent
+Entry 1 - [March 20, 2026, 3:00 PM]
 
-**Requirements**: Minimum 5 entries showing progression over time.
+What I did:
+Set up GitHub repository and initial project setup
 
----
+Details:
 
-## Example Entry Format:
+Created GitHub account using university email
 
-### Entry 1 - [April 1, 2026, 2:30 PM]
-**What I did**: Forked the repository and set up my student ID
+Forked the starter repository
 
-**Details**: 
-- Created GitHub account with university email
-- Forked the starter repository
-- Changed student ID on line 92 to my actual ID (441234567)
-- Compiled and ran the program successfully
+Renamed repository to include my name
 
-**Challenges**: Had to install JDK first because javac wasn't recognized
+Added my student ID in SchedulerSimulation.java
 
-**Solution**: Downloaded JDK 17 from Oracle website and set PATH variable
+Ran the code for the first time to understand output
 
-**Time spent**: 30 minutes
 
----
+Challenges:
+I was not familiar with how to fork repositories and edit files directly on GitHub
 
-## Your Development Log:
+Solution:
+Watched a tutorial and followed the steps to fork and edit files correctly
 
-### Entry 1 - [Date and Time]
-**What I did**: 
+Time spent:
+40 minutes
 
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**: 
+Entry 2 - [March 21, 2026, 5:30 PM]
 
-**Details**: 
+What I did:
+Understanding the starter code and how the scheduling works
 
-**Challenges**: 
+Details:
 
-**Solution**: 
+Read the Process class and SchedulerSimulation class
 
-**Time spent**: 
+Learned how Round-Robin scheduling works
 
----
+Observed how threads are created and executed
 
-### Entry 3 - [Date and Time]
-**What I did**: 
+Tested the program multiple times to understand behavior
 
-**Details**: 
 
-**Challenges**: 
+Challenges:
+It was difficult to understand how threads and queue work together
 
-**Solution**: 
+Solution:
+Reviewed lecture slides and searched examples online about threading and queues
 
-**Time spent**: 
+Time spent:
+1 hour
 
----
-
-### Entry 4 - [Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**: 
+Entry 3 - [March 22, 2026, 4:00 PM]
 
-**Details**: 
+What I did:
+Implemented Feature 1: Process Priority
 
-**Challenges**: 
+Details:
 
-**Solution**: 
+Added priority variable to Process class
 
-**Time spent**: 
+Generated random priority values (1–5)
+
+Modified output to display priority when process enters queue
+
+Tested to ensure values appear correctly
+
+
+Challenges:
+At first, I forgot to display the priority in the output
+
+Solution:
+Updated the print statement to include priority information
+
+Time spent:
+45 minutes
+
 
 ---
 
-### Entry 6 - [Optional - Date and Time]
-**What I did**: 
+Entry 4 - [March 23, 2026, 6:00 PM]
 
-**Details**: 
+What I did:
+Implemented Feature 2: Context Switch Counter
 
-**Challenges**: 
+Details:
 
-**Solution**: 
+Created a static variable to count context switches
 
-**Time spent**: 
+Incremented counter every time a process starts execution
+
+Displayed total count at the end of simulation
+
+
+Challenges:
+I was unsure where exactly to increment the counter
+
+Solution:
+Placed the increment inside the scheduler loop before starting each thread
+
+Time spent:
+50 minutes
+
 
 ---
 
-## Summary
+Entry 5 - [March 24, 2026, 7:00 PM]
 
-**Total time spent on assignment**: [X hours]
+What I did:
+Implemented Feature 3: Waiting Time Tracking
 
-**Most challenging part**: 
+Details:
 
-**Most interesting learning**: 
+Added creation time and waiting time variables
 
-**What I would do differently next time**: 
+Used System.currentTimeMillis() to track time
+
+Calculated waiting time after process completion
+
+Displayed results in the final output
+
+
+Challenges:
+The waiting time calculation was confusing at first
+
+Solution:
+Reviewed how time differences work and adjusted the formula correctly
+
+Time spent:
+1 hour
+
+
+---
+
+Entry 6 - [March 25, 2026, 8:30 PM]
+
+What I did:
+Final testing and documentation
+
+Details:
+
+Tested all features together
+
+Fixed minor bugs in output formatting
+
+Completed DEVELOPMENT_LOG, REFLECTION, and ANSWERS files
+
+Checked commits and repository structure
+
+
+Challenges:
+Some output values were not clear
+
+Solution:
+Improved formatting and added clearer print statements
+
+Time spent:
+45 minutes
+
+
+---
+
+ Summary
+
+Total time spent on assignment:
+~5 hours
+
+Most challenging part:
+Understanding how threads and scheduling work together and calculating waiting time correctly
+
+Most interesting learning:
+Learning how multithreading works in Java and how processes are scheduled using Round-Robin
+
+What I would do differently next time:
+Start earlier and practice more on threading concepts before implementing features
