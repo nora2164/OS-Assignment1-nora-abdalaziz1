@@ -11,7 +11,20 @@ Answer all 4 questions with detailed explanations. Each answer should be **3-5 s
 
 **Your Answer:**
 
-[Write your answer here. Consider: What is a process? What is a thread? How do they differ in terms of memory, resources, creation overhead? Why are threads more suitable for this simulation?]
+A process is a full program with its own memory, while a thread is a smaller part of a program that shares memory with other threads.
+
+We used threads in this assignment because they are faster and use fewer resources than processes.
+
+Differences:
+
+- Threads share memory → faster communication
+- Processes have separate memory → slower
+
+In the code:
+Thread thread = new Thread(process);
+
+---
+
 
 ---
 
@@ -21,7 +34,16 @@ Answer all 4 questions with detailed explanations. Each answer should be **3-5 s
 
 **Your Answer:**
 
-[Write your answer here. Describe the specific behavior - where does the process go? When does it run again? Give an example from your actual program output showing a process that was re-queued.]
+If a process does not finish in its time quantum, it is stopped and moved to the end of the queue.
+
+Example:
+P1 completed quantum
+P1 yields CPU
+P1 added to ready queue
+
+This is important for fairness, so all processes get a chance to run.
+
+
 
 Example from my output:
 ```
@@ -39,25 +61,29 @@ Example from my output:
 
 **Your Answer:**
 
-[Write your answer here. For each state, explain when P1 enters that state during the simulation. Use your understanding of the code to trace through the lifecycle.]
 
-1. **New**: [When is P1 in New state?]
+A thread goes through these states:
 
-2. **Runnable**: [When does P1 become Runnable?]
+- New: when the thread is created
+- Runnable: when start() is called
+- Running: when run() is executing
+- Waiting: when using join() or sleep()
+- Terminated: when execution finishes
 
-3. **Running**: [When is P1 Running?]
+Example: P1 starts with start(), runs, then finishes.
 
-4. **Waiting**: [When/why would P1 be Waiting?]
 
-5. **Terminated**: [When is P1 Terminated?]
 
----
 
 ## Question 4: Real-World Applications
 
 **Question**: Give **TWO** real-world examples where Round-Robin scheduling with threads would be useful. Explain why this scheduling algorithm works well for those scenarios.
 
-**Your Answer:**
+1. Web Server: handles many users, each gets CPU time
+2. Media Player: runs audio and video together
+
+Round Robin is good because it gives fair time to each task and keeps the system responsive.
+
 
 ### Example 1: [Name of application/scenario]
 
@@ -67,23 +93,23 @@ Example from my output:
 **Why Round-Robin works well here**: 
 [Explain why Round-Robin scheduling is suitable. Consider fairness, responsiveness, predictability, etc.]
 
-### Example 2: [Name of application/scenario]
+### Example 2: CPU Scheduling
 
-**Description**: 
-[Describe the real-world scenario or application]
+Description:
+In operating systems, the CPU time is shared among processes. Each process is given a small fixed time called a time quantum, and then the CPU moves to the next process in a circular order.
 
-**Why Round-Robin works well here**: 
-[Explain why Round-Robin scheduling is suitable. Consider fairness, responsiveness, predictability, etc.]
-
+Why Round-Robin works well here:
+Round-Robin works well because it ensures fairness among all processes. Every process gets an equal chance to run, which prevents any single process from monopolizing the CPU. It also improves system responsiveness.
 ---
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1. 
-2. 
-3. 
+1. The concept of time quantum in scheduling.
+2.The importance of fairness in resource allocation.
+3.How Round-Robin improves responsiveness and reduces waiting time.. 
 
 **Concepts I need to study more:**
-1. 
-2. 
+1. How to choose the optimal time quantum.
+2.The differences between Round-Robin and other algorithms like FCFS and SJF.
+
